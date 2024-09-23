@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+    @extends('layouts.app')
+
+    @section('css')
     <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
+    @endsection
 </head>
 
 <body>
@@ -20,6 +24,7 @@
     </header>
 
     <main>
+    @section('content')
         <div class="confirm__content">
             <div class="confirm__heading">
                 <h2>お問い合わせ内容確認</h2>
@@ -59,6 +64,7 @@
                 </div>
             </form>
         </div>
+        @endsection
     </main>
 </body>
 
